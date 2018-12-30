@@ -1,0 +1,92 @@
+﻿@model IEnumerable<ENAapp.Models.Compte>
+
+@{
+    ViewData["Title"] = "Index";
+
+}
+
+<h2>Index</h2>
+<a href="~/Views/Comptes/Index.cshtml">~/Views/Comptes/Index.cshtml</a>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Passhash)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imgsrc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConfirmationToken)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConfirmatAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResetToken)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResetAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriculeNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Passhash)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Imgsrc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Profil)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ConfirmationToken)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ConfirmatAt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ResetToken)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ResetAt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MatriculeNavigation.Matricule)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

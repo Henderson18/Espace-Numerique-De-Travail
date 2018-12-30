@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Import";
+}
+@using System.Collections.Generic;
+
+@model IEnumerable<ENAapp.Models.Compte>
+@{
+    ViewData["Title"] = "Index";
+}
+@if(ViewBag.error != null){
+<span class="text-danger">@ViewBag.error</span>
+}
+
+@if(ViewBag.val != null){
+<table class="table">
+    <tbody>
+        @foreach (var item in  ViewBag.val) {
+        <tr>
+            <td>
+                @item.Passhash
+            </td>
+            <td>
+                @item.Email
+            </td>
+            <td>
+                @item.ImgSrc
+            </td>
+            <td>
+                @item.Matricule
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+}
+

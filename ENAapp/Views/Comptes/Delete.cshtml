@@ -1,0 +1,82 @@
+﻿@model ENAapp.Models.Compte;
+
+@{
+    ViewData["Title"] = "Delete";
+
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Compte</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Passhash)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Passhash)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Imgsrc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Imgsrc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profil)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profil)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmationToken)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmationToken)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmatAt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmatAt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResetToken)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResetToken)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResetAt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResetAt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MatriculeNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MatriculeNavigation.Matricule)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
